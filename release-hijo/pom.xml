@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>es.alberto.release</groupId>
 		<artifactId>release-plugin-test</artifactId>
-		<version>1.3-SNAPSHOT</version>
+		<version>1.4</version>
 	</parent>
 	<artifactId>release-hijo</artifactId>
 </project>
