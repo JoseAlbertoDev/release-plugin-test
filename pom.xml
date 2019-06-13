@@ -7,11 +7,10 @@
 	<name>release-plugin-test</name>
 	<url>http://maven.apache.org</url>
 	
-	<!-- <scm>
+	<scm>
 		<developerConnection>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
-	 -->
 	
 	<properties>
 		<!-- https://maven.apache.org/general.html#encoding-warning -->
@@ -29,63 +28,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>2.5.3</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-	
-	<profiles>
-		<profile>
-			<id>repo-ingenia</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-				<property>
-					<name>repo-ingenia</name>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-release-plugin</artifactId>
-						<configuration>
-							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</connectionUrl>
-							<developmentVersion>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</developmentVersion>
-							<autoVersionSubmodules>true</autoVersionSubmodules>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>repo-osde</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-				<property>
-					<name>repo-osde</name>
-					<value>1</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-release-plugin</artifactId>
-						<configuration>
-							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-scm-alternativo.git</connectionUrl>
-							<developmentVersion>scm:git:https://github.com/JoseAlbertoDev/release-scm-alternativo.git</developmentVersion>
-							<autoVersionSubmodules>true</autoVersionSubmodules>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 	
 	<modules>
 		<module>release-hijo</module>
