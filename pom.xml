@@ -7,10 +7,11 @@
 	<name>release-plugin-test</name>
 	<url>http://maven.apache.org</url>
 	
-	<scm>
+	<!-- <scm>
 		<developerConnection>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+	 -->
 	
 	<properties>
 		<!-- https://maven.apache.org/general.html#encoding-warning -->
@@ -55,6 +56,7 @@
 						<artifactId>maven-release-plugin</artifactId>
 						<configuration>
 							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</connectionUrl>
+							<developmentVersion>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</developmentVersion>
 							<autoVersionSubmodules>true</autoVersionSubmodules>
 						</configuration>
 					</plugin>
@@ -67,6 +69,7 @@
 				<activeByDefault>false</activeByDefault>
 				<property>
 					<name>repo-osde</name>
+					<value>1</value>
 				</property>
 			</activation>
 			<build>
@@ -75,6 +78,7 @@
 						<artifactId>maven-release-plugin</artifactId>
 						<configuration>
 							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-scm-alternativo.git</connectionUrl>
+							<developmentVersion>scm:git:https://github.com/JoseAlbertoDev/release-scm-alternativo.git</developmentVersion>
 							<autoVersionSubmodules>true</autoVersionSubmodules>
 						</configuration>
 					</plugin>
