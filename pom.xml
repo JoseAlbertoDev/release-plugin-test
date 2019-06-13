@@ -6,10 +6,12 @@
 	<version>1.2-SNAPSHOT</version>
 	<name>release-plugin-test</name>
 	<url>http://maven.apache.org</url>
+	
 	<scm>
 		<developerConnection>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</developerConnection>
-	  	<tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
+	
 	<properties>
 		<!-- https://maven.apache.org/general.html#encoding-warning -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,6 +39,47 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	
+	<profiles>
+		<profile>
+			<id>repo-ingenia</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+				<property>
+					<name>repo-ingenia</name>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-release-plugin</artifactId>
+						<configuration>
+							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</connectionUrl>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>repo-osde</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+				<property>
+					<name>repo-osde</name>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-release-plugin</artifactId>
+						<configuration>
+							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-scm-alternativo.git</connectionUrl>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 	
 	<modules>
 		<module>release-hijo</module>
