@@ -3,18 +3,19 @@
 	<groupId>es.alberto.release</groupId>
 	<artifactId>release-plugin-test</artifactId>
 	<packaging>pom</packaging>
-	<version>1.2-Test-1</version>
+	<version>1.0</version>
 	<name>release-plugin-test</name>
 	<url>http://maven.apache.org</url>
 	<scm>
 		<developerConnection>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</developerConnection>
-	  <tag>1.2-Test-1</tag>
+	  	<tag>HEAD</tag>
   </scm>
 	<properties>
 		<!-- https://maven.apache.org/general.html#encoding-warning -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.scm.id>github-alberto</project.scm.id>
 	</properties>
 	
 	<dependencies>
@@ -25,6 +26,17 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.3</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 	
 	<modules>
 		<module>release-hijo</module>
