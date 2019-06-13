@@ -55,6 +55,7 @@
 						<artifactId>maven-release-plugin</artifactId>
 						<configuration>
 							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-plugin-test.git</connectionUrl>
+							<autoVersionSubmodules>true</autoVersionSubmodules>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -74,6 +75,7 @@
 						<artifactId>maven-release-plugin</artifactId>
 						<configuration>
 							<connectionUrl>scm:git:https://github.com/JoseAlbertoDev/release-scm-alternativo.git</connectionUrl>
+							<autoVersionSubmodules>true</autoVersionSubmodules>
 						</configuration>
 					</plugin>
 				</plugins>
